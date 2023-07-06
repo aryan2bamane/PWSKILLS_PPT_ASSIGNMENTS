@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Site</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            gap: 10px;
+            overflow: hidden;
+        }
+
+        /* For Screen Size Less Than 425px */
+        @media screen and (max-width:425px) {
+            body {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            header {
+                display: flex;
+                flex-direction: row;
+                height: 50px;
+
+            }
+
+            .logo {
+
+                background-color: lightseagreen;
+                width: 30%;
+            }
+
+            nav {
+
+                background-color: lightgray;
+                width: 70%;
+            }
+
+
+
+            .banner {
+                height: 150px;
+                width: 100%;
+                background-color: gray;
+            }
+
+            .content {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .data {
+                display: flex;
+                align-items: center;
+                background-color: lightblue;
+                height: 300px;
+            }
+
+            footer {
+                background-color: lightgray;
+                width: 100%;
+                height: 200px;
+            }
+        }
+
+        /* For Screen Size Less Than 768px */
+        @media screen and (min-width:425px) and (max-width:768px) {
+
+            body {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            header {
+                display: flex;
+                flex-direction: row;
+                height: 50px;
+
+            }
+
+            .logo {
+
+                background-color: lightseagreen;
+                width: 30%;
+            }
+
+            nav {
+
+                background-color: lightgray;
+                width: 70%;
+            }
+
+            .banner {
+                height: 200px;
+                width: 100%;
+                background-color: gray;
+            }
+
+            .content {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .data {
+                display: flex;
+                align-items: center;
+                background-color: lightblue;
+                height: 300px;
+            }
+
+            footer {
+                background-color: lightgray;
+                width: 100%;
+                height: 200px;
+            }
+        }
+
+        /* For Screen Size Less Than 1024px */
+        @media screen and (min-width:768px) and (max-width:1024px) {
+            body {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            header {
+                display: flex;
+                flex-direction: row;
+                height: 70px;
+            }
+
+            .logo {
+                background-color: lightseagreen;
+                width: 30%;
+            }
+
+            nav {
+                background-color: lightgray;
+                width: 70%;
+            }
+
+            .banner {
+                height: 300px;
+                width: 100%;
+                background-color: gray;
+            }
+
+            .content {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .data {
+                width: 23%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                background-color: lightblue;
+            }
+
+            footer {
+                background-color: lightgray;
+                width: 100%;
+                height: 200px;
+            }
+        }
+
+        /* For Screen Size Less Than 1440px */
+        @media screen and (min-width:1025px) and (max-width:1440px) {
+            body {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            header {
+                display: flex;
+                flex-direction: row;
+                height: 70px;
+            }
+
+            .logo {
+                background-color: lightseagreen;
+                width: 30%;
+            }
+
+            nav {
+                background-color: lightgray;
+                width: 70%;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                gap: 10px;
+            }
+
+            .data {
+                width: 24%;
+
+                display: flex;
+                align-items: center;
+                background-color: lightblue;
+                height: 300px;
+            }
+
+            .banner {
+                height: 400px;
+                width: 100%;
+                background-color: gray;
+            }
+
+            footer {
+                background-color: lightgray;
+                width: 100%;
+                height: 200px;
+            }
+        }
+
+
+        /* For Screen Size more Than 1440px */
+        @media screen and (min-width:1440px) {
+            body {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            header {
+                display: flex;
+                flex-direction: row;
+                height: 80px;
+            }
+
+            .logo {
+                background-color: lightseagreen;
+                width: 30%;
+            }
+
+            nav {
+                background-color: lightgray;
+                width: 70%;
+            }
+
+            .content {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            .data {
+                width: 24%;
+                display: flex;
+                align-items: center;
+                background-color: lightblue;
+                height: 300px;
+            }
+
+            .banner {
+                height: 400px;
+                width: 100%;
+                background-color: gray;
+            }
+
+            footer {
+                background-color: lightgray;
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+        <nav></nav>
+    </header>
+    <main>
+        <div class="banner"></div>
+        <div class="content">
+            <div class="data">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Blanditiis saepe sunt iusto velit consequuntur exercitationem illum
+                    alias dicta! Ea odit quod sunt dolorem dolor amet tenetur veritatis voluptatum minima quis corrupti
+                    maiores inventore atque ut itaque eaque incidunt quas aspernatur suscipit deleniti praesentium,
+                    quasi eligendi eius. Expedita, porro saepe. Cupiditate!</p>
+            </div>
+            <div class="data">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Blanditiis saepe sunt iusto velit consequuntur exercitationem illum
+                    alias dicta! Ea odit quod sunt dolorem dolor amet tenetur veritatis voluptatum minima quis corrupti
+                    maiores inventore atque ut itaque eaque incidunt quas aspernatur suscipit deleniti praesentium,
+                    quasi eligendi eius. Expedita, porro saepe. Cupiditate!</p>
+            </div>
+            <div class="data">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Blanditiis saepe sunt iusto velit consequuntur exercitationem illum
+                    alias dicta! Ea odit quod sunt dolorem dolor amet tenetur veritatis voluptatum minima quis corrupti
+                    maiores inventore atque ut itaque eaque incidunt quas aspernatur suscipit deleniti praesentium,
+                    quasi eligendi eius. Expedita, porro saepe. Cupiditate!</p>
+            </div>
+            <div class="data">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Blanditiis saepe sunt iusto velit consequuntur exercitationem illum
+                    alias dicta! Ea odit quod sunt dolorem dolor amet tenetur veritatis voluptatum minima quis corrupti
+                    maiores inventore atque ut itaque eaque incidunt quas aspernatur suscipit deleniti praesentium,
+                    quasi eligendi eius. Expedita, porro saepe. Cupiditate!</p>
+            </div>
+
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
