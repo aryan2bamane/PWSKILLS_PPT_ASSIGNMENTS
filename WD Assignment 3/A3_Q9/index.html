@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get One Card App</title>
+  <style media="screen">
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    footer {
+      background-color: #121315;
+      color: #a7a7a7;
+      font-size: 16px;
+    }
+
+    footer * {
+      font-family: "Poppins", sans-serif;
+      box-sizing: border-box;
+      border: none;
+      outline: none;
+    }
+
+    .row {
+      padding: 1em 1em;
+    }
+
+    .row.primary {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 2fr;
+      align-items: stretch;
+    }
+
+    .column {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0 2em;
+      min-height: 15em;
+    }
+
+    footer h3 {
+      width: 100%;
+      text-align: left;
+      color: white;
+      font-size: 1.4em;
+      white-space: nowrap;
+    }
+
+    footer ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+    }
+
+    footer li:not(:first-child) {
+      margin-top: 0.8em;
+    }
+
+    footer ul li a {
+      color: #a7a7a7;
+      text-decoration: none;
+    }
+
+    footer ul li a:hover {
+      color: #2a8ded;
+    }
+
+    .about p {
+      text-align: justify;
+      line-height: 2;
+      margin: 0;
+    }
+
+    footer input,
+    footer button {
+      font-size: 1em;
+      padding: 1em;
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+
+    footer button {
+      background-color: #2a8ded;
+      color: #ffffff;
+    }
+
+
+
+    .footer-menu {
+      float: left;
+      margin-top: 10px;
+    }
+
+    .footer-menu a {
+      color: #cfd2d6;
+      padding: 6px;
+
+      text-decoration: none;
+    }
+
+    .footer-menu a:hover {
+      color: #27bcda;
+    }
+
+
+
+    @media screen and (max-width: 550px) {
+
+
+
+
+
+
+
+
+
+      .row.primary {
+        grid-template-columns: 1fr;
+      }
+
+    }
+  </style>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    @media screen and (max-width:425px) {
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      /* Stylefor header */
+      header {
+        width: 100%;
+        height: 50px;
+        /* background-color: rgb(43, 43, 43); */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 10px;
+      }
+
+      header img {
+        height: 30px;
+        width: 30px;
+      }
+
+      .navItems ul,
+      .navItems li,
+      a {
+        display: none;
+      }
+
+      .navItems ul li {
+        list-style-type: none;
+        margin: 0px 35px;
+      }
+
+      .navItems ul li,
+      a {
+        text-decoration: none;
+        color: white;
+
+      }
+
+      .hamburger {
+        /* filter: invert(); */
+        height: 30px;
+        width: 30px;
+      }
+
+      .loginBtn {
+        display: none;
+      }
+
+      /* Style for main */
+      main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0px;
+      }
+
+      .left {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .left h1 {
+        font-size: 30px;
+        color: rgba(24, 147, 247, 1);
+      }
+
+      .left h2 {
+        font-size: 20px;
+      }
+
+      .left span {
+        color: rgba(24, 147, 247, 1);
+        font-size: x-large;
+      }
+
+      .left img {
+        height: 55px;
+        width: fit-content;
+      }
+
+      .left p {
+        font-size: 16px;
+      }
+
+      .right video {
+        /* height: 500px; */
+        width: 100%;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 500px;
+        text-align: center;
+      }
+
+      .info h2 {
+        font-size: 50px;
+        color: #1893f7;
+      }
+
+      .info h3 {
+        font-size: 25px;
+
+      }
+
+
+
+    }
+
+    @media screen and (min-width:426px) {
+
+      /* Stylefor header */
+      header {
+        width: auto;
+        height: 70px;
+        background-color: rgb(43, 43, 43);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 30px;
+      }
+
+      header img {
+        filter: invert();
+        height: 50px;
+        width: 50px;
+      }
+
+      .navItems ul {
+        display: flex;
+        margin: 5px;
+      }
+
+      .navItems ul li {
+        list-style-type: none;
+        margin: 0px 35px;
+      }
+
+      .navItems ul li,
+      a {
+        text-decoration: none;
+        color: white;
+
+      }
+
+      .loginBtn {
+        background-color: #1893f7;
+        color: white;
+        padding: 10px 15px;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        width: 100px;
+      }
+
+      .hamburger {
+        display: none;
+      }
+
+      /* Style for main */
+      main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        /* padding: 0px 250px; */
+      }
+
+      .left {
+        padding: 30px;
+        text-align: left;
+        width: 300px;
+      }
+
+      .left h1 {
+        font-size: 80px;
+        color: rgba(24, 147, 247, 1);
+      }
+
+      .left h2 {
+        font-size: 40px;
+      }
+
+      .left span {
+        color: rgba(24, 147, 247, 1);
+        font-size: x-large;
+      }
+
+      .left img {
+        height: 85px;
+      }
+
+      .left p {
+        font-size: 18px;
+      }
+
+
+
+      .right video {
+        width: 400px;
+      }
+
+      .info {
+        height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+      }
+
+      .info h2 {
+        color: #1893f7;
+        font-size: 60px;
+      }
+
+      .info h3 {
+        font-size: 50px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="./logo_black.svg" alt="logo" srcset="" class="logo">
+    <div class="navItems">
+      <!-- Nav Bar Items -->
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Content</a></li>
+      </ul>
+    </div>
+    <button class="loginBtn">
+      Login
+    </button>
+    <img src="./Hamburger_icon.svg.png" alt="" class="hamburger">
+  </header>
+  <!-- Main -->
+  <main>
+    <!-- Basic landing page -->
+    <div class="content">
+      <div class="left">
+        <h2>Say Hi To</h2>
+        <h1>One Card</h1>
+        <br>
+        <span>Co-branded Card Issues : </span>
+        <br>
+        <img src="./Banking_partners_24thJan_dark__.png" alt="banks">
+        <br><br>
+        <p>India's best metal credit card. Built with full-stack tech. Backed by the principles of simplicity,
+          transparency, and giving back control to the user.</p>
+      </div>
+      <div class="right">
+        <video src="./OneCard - India's best metal credit card.mp4" autoplay="autoplay" muted="muted"
+          loop="loop"></video>
+      </div>
+    </div>
+
+    <!-- Dark or light mode -->
+    <div class="info">
+      <h2>No Hidden Fees Ever</h2>
+      <br><br>
+      <h3>No Joining Fees </h3>
+      <h3>No Annual Fees </h3>
+      <h3>No Reward Redemption Fees </h3>
+    </div>
+  </main>
+
+
+  <footer>
+    <div class="row primary">
+      <div class="column about">
+        <h3>One Card</h3>
+        <p>India's best metal credit card. Built with full stack tech. Backed by the principles of simplicity,
+          transparency and giving back control to the users.</p>
+
+      </div>
+      <div class="column links">
+        <h3>Navigation</h3>
+        <ul>
+          <li>
+            <a href="#faq">Home</a>
+          </li>
+          <li>
+            <a href="#cookies-policy">About Us</a>
+          </li>
+          <li>
+            <a href="#terms-of-services">Careers</a>
+          </li>
+          <li>
+            <a href="#support">Offers</a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="column links">
+        <h3>Support</h3>
+        <ul>
+          <li>
+            <a href="#faq">F.A.Q</a>
+          </li>
+          <li>
+            <a href="#cookies-policy">Cookies Policy</a>
+          </li>
+          <li>
+            <a href="#terms-of-services">Terms Of Service</a>
+          </li>
+          <li>
+            <a href="#support">Support</a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="column subscribe">
+        <h3>Newsletter</h3>
+        <div>
+          <input type="email" placeholder="Your email id here" />
+          <button>Subscribe</button>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </footer>
+</body>
+
+</html>

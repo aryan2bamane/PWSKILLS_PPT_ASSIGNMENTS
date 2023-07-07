@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get One Card App</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width:425px) {
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            /* Stylefor header */
+            header {
+                width: 100%;
+                height: 50px;
+                /* background-color: rgb(43, 43, 43); */
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 10px;
+            }
+
+            header img {
+                height: 30px;
+                width: 30px;
+            }
+
+            .navItems ul,
+            .navItems li,
+            a {
+                display: none;
+            }
+
+            .navItems ul li {
+                list-style-type: none;
+                margin: 0px 35px;
+            }
+
+            .navItems ul li,
+            a {
+                text-decoration: none;
+                color: white;
+
+            }
+
+            .hamburger {
+                /* filter: invert(); */
+                height: 30px;
+                width: 30px;
+            }
+
+            .loginBtn {
+                display: none;
+            }
+
+            /* Style for main */
+            main {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            .content {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                padding: 50px 0px;
+            }
+
+            .left {
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .left h1 {
+                font-size: 30px;
+                color: rgba(24, 147, 247, 1);
+            }
+
+            .left h2 {
+                font-size: 20px;
+            }
+
+            .left span {
+                color: rgba(24, 147, 247, 1);
+                font-size: x-large;
+            }
+
+            .left img {
+                height: 55px;
+                width: fit-content;
+            }
+
+            .left p {
+                font-size: 16px;
+            }
+
+            .right video {
+                /* height: 500px; */
+                width: 100%;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: auto;
+                height: 500px;
+                text-align: center;
+            }
+
+            .info h2 {
+                font-size: 50px;
+                color: #1893f7;
+            }
+
+            .info h3 {
+                font-size: 25px;
+
+            }
+
+
+
+        }
+
+        @media screen and (min-width:426px) {
+
+            /* Stylefor header */
+            header {
+                width: auto;
+                height: 70px;
+                background-color: rgb(43, 43, 43);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 30px;
+            }
+
+            header img {
+                filter: invert();
+                height: 50px;
+                width: 50px;
+            }
+
+            .navItems ul {
+                display: flex;
+                margin: 5px;
+            }
+
+            .navItems ul li {
+                list-style-type: none;
+                margin: 0px 35px;
+            }
+
+            .navItems ul li,
+            a {
+                text-decoration: none;
+                color: white;
+
+            }
+
+            .loginBtn {
+                background-color: #1893f7;
+                color: white;
+                padding: 10px 15px;
+                font-size: 20px;
+                border: none;
+                border-radius: 10px;
+                width: 100px;
+            }
+
+            .hamburger {
+                display: none;
+            }
+
+            /* Style for main */
+            main {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .content {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+                /* padding: 0px 250px; */
+            }
+
+            .left {
+                padding: 30px;
+                text-align: left;
+                width: 300px;
+            }
+
+            .left h1 {
+                font-size: 80px;
+                color: rgba(24, 147, 247, 1);
+            }
+
+            .left h2 {
+                font-size: 40px;
+            }
+
+            .left span {
+                color: rgba(24, 147, 247, 1);
+                font-size: x-large;
+            }
+
+            .left img {
+                height: 85px;
+            }
+
+            .left p {
+                font-size: 18px;
+            }
+
+
+
+            .right video {
+                /* height: 650px; */
+                width: 500px;
+            }
+
+            .info {
+                /* width: 100%; */
+                height: 700px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background-color: black;
+                color: white;
+            }
+
+            .info h2 {
+                color: #1893f7;
+                font-size: 60px;
+            }
+
+            .info h3 {
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <img src="./logo_black.svg" alt="logo" srcset="" class="logo">
+        <div class="navItems">
+            <!-- Nav Bar Items -->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Content</a></li>
+            </ul>
+        </div>
+        <button class="loginBtn">
+            Login
+        </button>
+        <img src="./Hamburger_icon.svg.png" alt="" class="hamburger">
+    </header>
+    <!-- Main -->
+    <main>
+        <!-- Basic landing page -->
+        <div class="content">
+            <div class="left">
+                <h2>Say Hi To</h2>
+                <h1>One Card</h1>
+                <br>
+                <span>Co-branded Card Issues : </span>
+                <br>
+                <img src="./Banking_partners_24thJan_dark__.png" alt="banks">
+                <br><br>
+                <p>India's best metal credit card. Built with full-stack tech. Backed by the principles of simplicity,
+                    transparency, and giving back control to the user.</p>
+            </div>
+            <div class="right">
+                <video src="./OneCard - India's best metal credit card.mp4" autoplay="autoplay" muted="muted"
+                    loop="loop"></video>
+            </div>
+        </div>
+
+        <!-- Dark or light mode -->
+        <div class="info">
+            <h2>No Hidden Fees Ever</h2>
+            <br><br>
+            <h3>No Joining Fees </h3>
+            <h3>No Annual Fees </h3>
+            <h3>No Reward Redemption Fees </h3>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer></footer>
+</body>
+
+</html>
